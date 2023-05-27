@@ -6,41 +6,23 @@ import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
 import Button from './src/components/Button'
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
+import Display from './src/components/Display'
 
 function App(): JSX.Element {
-  // const isDarkMode = useColorScheme() === 'dark';
-
-  // const backgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  // };
-
+  state = {
+    displayValue: '0'
+  }
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        >
-        <View style={styles.buttons}>
+      <Display value={this.state.displayValue} />
+      <View style={styles.buttons}>
           <Button label="AC" />
           <Button label="/" />
           <Button label="7" />
@@ -59,7 +41,6 @@ function App(): JSX.Element {
           <Button label="." />
           <Button label="=" />
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 }
