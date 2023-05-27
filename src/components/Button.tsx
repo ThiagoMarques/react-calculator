@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {Text} from 'react-native';
 import {StyleSheet, Text, Dimensions, TouchableHighlight} from 'react-native';
 
 const styles = StyleSheet.create({
